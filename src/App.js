@@ -20,9 +20,7 @@ export class App extends Component {
       },
     ],
     newTodo: "",
-    // isEmpty: false,
     isEmptyMessage: "Cannot submit an empty field",
-    // isDuplicate: false,
     isDuplicateMessage: "No duplicate!",
     errorMessage: "",
   };
@@ -30,12 +28,6 @@ export class App extends Component {
   handleOnInputChange = (event) => {
     this.setState({
       newTodo: event.target.value,
-    });
-  };
-
-  handleInputDuplicates = (event) => {
-    this.state.todoArray.some(function (element) {
-      return element.todo === event.target.newTodo.value;
     });
   };
 
